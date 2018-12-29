@@ -12,6 +12,7 @@ class DateCounter {
     const diff = (date - start) + ((start.getTimezoneOffset() - date.getTimezoneOffset()) * 60 * 1000);
     const oneDay = 1000 * 60 * 60 * 24
     const currentDay = Math.floor(diff / oneDay);
+    // const currentDay = 100;
     const minDay = 0;
     const maxDay = (((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0)) ? 366 : 365;
     const minPer = 0;
