@@ -39,5 +39,7 @@ function draw() {
  */
 
 function tweet() {
-  save(`${date.getPercent()}.png`);
+  // save(`${date.getPercent()}.png`);
+  let url = `https://twitter.com/intent/tweet?text=Today%20it%27s%20the%20${date.getPercent()}%25%20of%20the%20year!`;
+  window.open(url);
 }
