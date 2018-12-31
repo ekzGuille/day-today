@@ -38,7 +38,6 @@ function draw() {
  * https://www.youtube.com/watch?v=mUoIPmZ4KwA
  */
 
-
 function tweet() {
   save(`${date.getPercent()}.png`);
 }
