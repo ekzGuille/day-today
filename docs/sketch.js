@@ -38,7 +38,7 @@ function draw() {
 }
 
 function tweet() {
-  const url = `https://twitter.com/intent/tweet?text=Today%20it%27s%20the%20${date.getPercent()}%25%20of%20the%20year! Checkout this feature on ${window.location.href}!!`;
+  const url = `https://twitter.com/intent/tweet?text=Today%20it%27s%20the%20${date.getPercent()}%25%20of%20the%20year! Checkout this feature on ${window.location.href} 😊`;
   window.open(url);
 }
 
