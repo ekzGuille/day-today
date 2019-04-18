@@ -6,7 +6,7 @@ let buttonTweet;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  buttonTweet = createButton('Tweet it! 🕊');
+  buttonTweet = createButton('Tweet it! 🕊🌍');
   buttonTweet.addClass('btnTweet');
   buttonTweet.mousePressed(tweet);
   textAlign(CENTER);
@@ -29,17 +29,8 @@ function draw() {
   rect(recOffset + barWidth, (windowHeight / 2) + recOffset, windowWidth - (2 * recOffset) - barWidth, 50);
 }
 
-//TODO, tweetear la imagen
-/**
- * https://twittercommunity.com/t/tweet-with-image-using-javascript/82555
- * https://developer.twitter.com/en/docs/twitter-for-websites/tweet-button/overview
- * https://stackoverflow.com/questions/15181861/how-do-i-let-a-user-tweet-an-image
- * https://developer.twitter.com/en/docs/api-reference-index
- * https://www.youtube.com/watch?v=mUoIPmZ4KwA
- */
-
 function tweet() {
   // save(`${date.getPercent()}.png`);
-  let url = `https://twitter.com/intent/tweet?text=Today%20it%27s%20the%20${date.getPercent()}%25%20of%20the%20year!`;
+  let url = `https://twitter.com/intent/tweet?text=Today%20it%27s%20the%20${date.getPercent()}%25%20of%20the%20year! Checkout this feature on ${window.location.href}!!`;
   window.open(url);
 }
