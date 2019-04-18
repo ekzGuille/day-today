@@ -3,17 +3,25 @@ let size = 200;
 let recOffset = 50;
 let barWidth;
 let buttonTweet;
+let buttonRepoLink;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
   buttonTweet = createButton('Tweet it! 🕊🌍');
   buttonTweet.addClass('btnTweet');
   buttonTweet.mousePressed(tweet);
+  
+  buttonRepoLink = createButton('Full repo');
+  buttonRepoLink.addClass('btnRepo');
+  buttonRepoLink.mousePressed(repoLink);
+  
   textAlign(CENTER);
+
 }
 
 function draw() {
   buttonTweet.position((windowWidth / 2) - recOffset - 40, (windowHeight - 80));
+  buttonRepoLink.position((windowWidth - 120) , (windowHeight - 45));
   background(0);
   fill(255);
   textSize(size);
@@ -30,7 +38,11 @@ function draw() {
 }
 
 function tweet() {
-  // save(`${date.getPercent()}.png`);
-  let url = `https://twitter.com/intent/tweet?text=Today%20it%27s%20the%20${date.getPercent()}%25%20of%20the%20year! Checkout this feature on ${window.location.href}!!`;
+  const url = `https://twitter.com/intent/tweet?text=Today%20it%27s%20the%20${date.getPercent()}%25%20of%20the%20year! Checkout this feature on ${window.location.href}!!`;
+  window.open(url);
+}
+
+function repoLink() {
+  const url = 'https://github.com/ekzGuille/dateToday';
   window.open(url);
 }
