@@ -1,6 +1,6 @@
-let date = new DateCounter();
-let size = 200;
-let recOffset = 50;
+const date = new DateCounter();
+const size = 200;
+const recOffset = 50;
 let barWidth;
 let buttonTweet;
 let buttonRepoLink;
@@ -16,7 +16,6 @@ function setup() {
   buttonRepoLink.mousePressed(repoLink);
   
   textAlign(CENTER);
-
 }
 
 function draw() {
@@ -26,7 +25,7 @@ function draw() {
   fill(255);
   textSize(size);
   text(`${date.getPercent()}%`, windowWidth / 2, windowHeight / 2);
-  barWidth = map(date.getPercent(), 0, 100, recOffset, windowWidth - (2 * recOffset));
+  barWidth = map(date.getPercent(), 0, 100, 0, windowWidth - (2 * recOffset));
   fill(0, 255, 0);
   stroke(255);
   strokeWeight(3);

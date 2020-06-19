@@ -13,10 +13,10 @@ class DateCounter {
     const oneDay = 1000 * 60 * 60 * 24;
     const currentDay = Math.floor(diff / oneDay);
     const minDay = 0;
-    const maxDay = (((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0)) ? 366 : 365;
+    const maxDay = (((year % 4 === 0) && (year % 100 !== 0)) || (year % 400 === 0)) ? 366 : 365;
     const minPer = 0;
     const maxPer = 100;
     const per = this.mapping(currentDay, minDay, maxDay, minPer, maxPer);
-    return ~~(per*100)/100;
+    return ~~(per * 100) / 100;
   }
 }
